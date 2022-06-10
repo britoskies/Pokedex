@@ -1,0 +1,43 @@
+﻿@model Business.ViewModels.Management.EntitiesViewModel
+
+<div class="row">
+    <div class="w-100 my-5">
+        <a asp-action="Create" class="btn bg-custom-darkpurple text-white w-100 py-3">CREAR NUEVO TIPO</a>
+    </div>
+
+    @if (Model.TypeList.Count > 1)
+    {        
+        <section class="col-sm-5 mx-auto">
+            <table class="table table-responsive table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col" class="text-center">Opciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                @foreach (var item in Model.TypeList)
+                    {                
+                        @if (@item.Id != 5)
+                        {
+                            <tr>
+                              <td class="fs-5">@item.Name</td>
+                              <td class="d-flex gap-2">
+                                  <a asp-action="Edit" asp-route-id="@item.Id" class="btn bg-custom-darkpurple text-white w-100">Editar</a>
+                                  <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger w-100">Eliminar</a>
+                              </td>
+                            </tr>
+                        }
+                    }
+              </tbody>
+            </table>
+        </section>
+    }
+
+    else
+    {
+        <section class="col-6 bg-danger rounded-3 text-white mx-auto text-center p-4 mt-5">
+		    <h3 class="display-8 fw-normal text-uppercase fw-bolder m-0"> No hay tipos en el sistema </h3>
+	    </section>
+    }
+</div>

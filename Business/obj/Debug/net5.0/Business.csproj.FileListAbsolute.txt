@@ -1,0 +1,15 @@
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\bin\Debug\net5.0\Business.deps.json
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\bin\Debug\net5.0\Business.dll
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\bin\Debug\net5.0\Business.pdb
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\bin\Debug\net5.0\Data.dll
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\bin\Debug\net5.0\Data.pdb
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\Business.dll
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\refint\Business.dll
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\Business.pdb
+C:\Users\brito\Desktop\itla-2022-c2\programacion3\Pokedex\Business\obj\Debug\net5.0\ref\Business.dll

@@ -1,0 +1,55 @@
+﻿@model Business.ViewModels.Management.EntitiesViewModel
+
+<div class="row">
+    <div class="w-100 my-5">
+        <a asp-action="Create" class="btn bg-custom-darkpurple text-white w-100 py-3">CREAR NUEVO POKEMON</a>
+    </div>
+    @if (Model.PokemonList.Count > 0)
+    {
+        @foreach (var item in Model.PokemonList)
+        {        
+            <section class="col-sm-3 my-4 mx-auto">
+                <div class="card text-white border-0 shadow">
+                    <section class="card-header bg-custom-semipurple w-100 d-flex justify-content-center fw-bold text-uppercase">
+                        @item.Name
+                    </section>
+                    <section class="card-body">
+                        <img src=@item.ImageURL class="card-img-top img-fluid img-cover" alt="pokemon">
+                    </section>
+                    <section class="card-footer bg-custom-semipurple p-2">
+                        <div class="d-flex flex-column gap-2">
+                            <section class="bg-custom-purple px-3 py-2 rounded text-center w-100">
+                              @item.Region
+                            </section>
+                            <div class="d-flex gap-2">
+                                <section class="bg-custom-purple px-3 py-2 rounded text-center w-100">
+                                    @item.TypePrimary
+                                </section>
+                                @if (@item.TypeSecondary != "n")
+                                {
+                                    <section class="bg-custom-purple px-3 py-2 rounded text-center w-100">
+                                        @item.TypeSecondary
+                                    </section>
+                                }
+                            </div>
+                        </div>
+                        <div class="d-flex gap-2 bg-custom-lightpurple p-2 mt-2 rounded w-100">
+                            <section class="w-100"> 
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn bg-custom-darkpurple text-white w-100">Editar</a>
+                            </section>
+                            <section class="w-100"> 
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger text-white w-100">Borrar</a>
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        }
+    }
+    else
+    {
+        <section class="col-6 bg-danger rounded-3 text-white text-center mx-auto p-4 mt-5">
+		    <h3 class="display-8 fw-normal text-uppercase fw-bolder m-0"> No hay pokemones en el sistema </h3>
+	    </section>
+    }
+</div>

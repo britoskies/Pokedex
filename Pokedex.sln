@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex", "Pokedex\Pokedex.csproj", "{371E2C04-9E7B-48C0-BECD-93EB38334EE8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{4E80C599-A6F0-418D-B0CF-8482BA00432A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{D306CC68-4B8B-4E50-986A-CB9C1B33D4C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{371E2C04-9E7B-48C0-BECD-93EB38334EE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{371E2C04-9E7B-48C0-BECD-93EB38334EE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{371E2C04-9E7B-48C0-BECD-93EB38334EE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{371E2C04-9E7B-48C0-BECD-93EB38334EE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E80C599-A6F0-418D-B0CF-8482BA00432A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E80C599-A6F0-418D-B0CF-8482BA00432A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E80C599-A6F0-418D-B0CF-8482BA00432A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E80C599-A6F0-418D-B0CF-8482BA00432A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D306CC68-4B8B-4E50-986A-CB9C1B33D4C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D306CC68-4B8B-4E50-986A-CB9C1B33D4C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D306CC68-4B8B-4E50-986A-CB9C1B33D4C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D306CC68-4B8B-4E50-986A-CB9C1B33D4C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DFAEF3BD-8317-4A3B-A90A-09CFD5CCE388}
+	EndGlobalSection
+EndGlobal

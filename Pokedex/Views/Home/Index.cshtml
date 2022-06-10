@@ -1,0 +1,66 @@
+﻿@using Business.ViewModels.Pokemon
+@model List<PokemonViewModel>
+
+<div class="row">
+    <section class="bg-custom-semipurple rounded-3 text-white text-center p-3 mt-5">
+		<h3 class="display-8 fw-normal text-uppercase fw-bolder m-0"> Pokedex </h3>
+	</section>
+    <div class="col-sm-3 w-100 d-flex gap-4 my-5">
+        <form asp-action="Index" class=" d-flex gap-2 w-100">
+            <select class="form-select" name="RegionId">
+                <option disabled selected>Seleccionar región...</option>
+                <option value="null">Todas</option>
+                @foreach (var item in ViewBag.Regions)
+                {
+                    <option value="@item.Id">@item.Name</option>
+                }
+            </select>
+            <button class="btn bg-custom-darkpurple text-white" type="submit">Filtrar</button>
+        </form>
+        <form asp-action="Index" class="d-flex gap-2 w-100"> 
+            <input class="form-control" type="text" name="PokemonName" placeholder="Buscar por nombre">
+            <button class="btn bg-custom-darkpurple text-white" type="submit">Buscar</button>
+        </form>
+    </div>
+    
+  
+    @if (Model.Count > 0)
+    {  
+        @foreach (PokemonViewModel item in Model)
+        {        
+            <section class="col-sm-3 my-2 mx-auto">
+                <div class="card text-white border-0 shadow">
+                    <section class="card-header bg-custom-semipurple w-100 d-flex justify-content-center fw-bold text-uppercase">
+                        @item.Name
+                    </section>
+                    <section class="card-body">
+                        <img src=@item.ImageURL class="card-img-top img-fluid img-cover" alt="pokemon">
+                    </section>
+                    <section class="card-footer d-flex flex-column gap-2 bg-custom-semipurple p-2">
+                        <div class="bg-custom-purple px-3 py-2 rounded text-center w-100">
+                          @item.Region
+                        </div>
+                        <div class="d-flex gap-2">
+                            <section class="bg-custom-purple px-3 py-2 rounded text-center w-100">
+                                @item.TypePrimary
+                            </section>
+                            @if (@item.TypeSecondary != "n")
+                            {
+                                <section class="bg-custom-purple px-3 py-2 rounded text-center w-100">
+                                    @item.TypeSecondary
+                                </section>
+                            }
+                        </div>
+                    </section>
+                </div>
+            </section>
+        }
+    }
+
+    else
+    {
+        <section class="col-6 bg-danger rounded-3 text-white mx-auto text-center p-4 mt-5">
+		    <h3 class="display-8 fw-normal text-uppercase fw-bolder m-0"> No hay pokemones en el sistema </h3>
+	    </section>
+    }
+</div>

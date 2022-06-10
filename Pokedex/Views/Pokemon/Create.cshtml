@@ -1,0 +1,62 @@
+﻿@model Business.ViewModels.Pokemon.SavePokemonViewModel
+
+<div class="row">
+    <section class="bg-custom-semipurple rounded-3 text-white text-center p-3 my-5">
+		<h3 class="display-8 fw-normal text-uppercase fw-bolder m-0"> Creación de nuevos pokemones</h3>
+	</section>
+    <div class="col-md-4 mx-auto">
+        <form method="post" asp-controller="Pokemon" asp-action="Create" class="d-flex flex-column gap-3">
+            <div class="form-group d-flex flex-column gap-2">
+                <input asp-for="Name" class="form-control" placeholder="Nombre"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group d-flex flex-column gap-2">
+                <input asp-for="ImageURL" class="form-control" placeholder="URL de Imágen"/>
+                <span asp-validation-for="ImageURL" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select asp-for="RegionId" class="form-select" aria-label="Default select example">
+                  <option selected value="">Seleccione la Región</option>
+                    @foreach (var item in Model.RegionList)
+                    {
+                        <option value="@item.Id">@item.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="RegionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <select asp-for="TypePrimaryId" class="form-select" aria-label="Default select example">
+                  <option selected value="">Seleccione el Tipo Primario</option>
+                    @foreach (var item in Model.TypeList)
+                    {
+                        if (@item.Id != 5)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+                <span asp-validation-for="TypePrimaryId" class="text-danger"></span>
+            </div>
+            <div class="form-group d-flex flex-column gap-2">
+                <select asp-for=TypeSecondaryId class="form-select" aria-label="Default select example">
+                  <option value="5">Seleccione el Tipo Secundario</option>
+                    @foreach (var item in Model.TypeList)
+                    {
+                        if (@item.Id != 5)
+                        {
+                            <option value="@item.Id">@item.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+            <input type="hidden" value="Id" />
+            <div class="form-group">
+                <input type="submit" value="Crear Pokemon" class="btn bg-custom-darkpurple text-white w-100" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="col-4 mx-auto d-flex justify-content-center mt-5">
+    <a asp-action="Index" class="btn btn-danger text-white">Volver</a>
+</div>
