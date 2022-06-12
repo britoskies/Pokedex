@@ -33,8 +33,8 @@ namespace Business.Services
             pokemon.Id = vm.Id;
             pokemon.Name = vm.Name;
             pokemon.ImageURL = vm.ImageURL;
-            pokemon.RegionId = vm.RegionId;
-            pokemon.TypePrimaryId = vm.TypePrimaryId;
+            pokemon.RegionId = (int)vm.RegionId;
+            pokemon.TypePrimaryId = (int)vm.TypePrimaryId;
             pokemon.TypeSecondaryId = vm.TypeSecondaryId;
 
             await _pokemonRepo.UpdateAsync(pokemon);
@@ -45,8 +45,8 @@ namespace Business.Services
             PokemonModel pokemon = new();
             pokemon.Name = vm.Name;
             pokemon.ImageURL = vm.ImageURL;
-            pokemon.RegionId = vm.RegionId;
-            pokemon.TypePrimaryId = vm.TypePrimaryId;
+            pokemon.RegionId = (int)vm.RegionId;
+            pokemon.TypePrimaryId = (int)vm.TypePrimaryId;
             pokemon.TypeSecondaryId = vm.TypeSecondaryId;
 
             await _pokemonRepo.AddAsync(pokemon);

@@ -4,6 +4,7 @@
     <div class="w-100 my-5">
         <a asp-action="Create" class="btn bg-custom-darkpurple text-white w-100 py-3">CREAR NUEVO POKEMON</a>
     </div>
+
     @if (Model.PokemonList.Count > 0)
     {
         @foreach (var item in Model.PokemonList)

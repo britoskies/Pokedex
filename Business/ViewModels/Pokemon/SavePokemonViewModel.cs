@@ -20,10 +20,10 @@ namespace Business.ViewModels.Pokemon
         public string ImageURL { get; set; }
 
         [Required(ErrorMessage = "El campo región es requerido")]
-        public int RegionId { get; set; }
+        public int? RegionId { get; set; }
 
         [Required(ErrorMessage = "El campo de tipo primario es requerido")]
-        public int TypePrimaryId { get; set; }
+        public int? TypePrimaryId { get; set; }
         public int TypeSecondaryId { get; set; }
 
         public List<RegionViewModel> RegionList { get; set; }
